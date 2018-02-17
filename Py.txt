@@ -1,0 +1,17 @@
+1.) write a program in phython that verifies if a given string is a palindrome?
+2.) Write a program in phython that counts the number of various words in a string?
+    For ex. if a file contains only one line "a man eat a banana" - it should print:
+    a : 2
+    man :1 
+    eat : 1
+    banana : 1
+
+3) Create a class that has one protected integer variable. Derive a child class from the base  class. Hw should the constructor of the parent class be called from the child class?
+
+4.) Hw are exception raised in phython?
+
+5.) what phython construct should be used for resource acquisition and release?
+
+6.) Please explain a generator with an example.
+
+7.) Use list comprehension to obtain a list of even numbers from a list of integers.
