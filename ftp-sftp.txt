@@ -1,0 +1,90 @@
+SFTP - secure File Transfer Protocol
+SSH -Secure Shell protocol
+
+
+SFTP is packet-based protocol   
+----- FTP is text based 
+
+when FTP send a command such as - DELL file.txt
+SFTP would send a binary 0xBC and then "file.txt".
+
+
+SFTP is faster.
+
+
+FTP uses password authentication created by the user
+
+2 share the information from one cmptr 2 anothr - protocol
+WinSCP(FTP,SFTP,SCP,WebDAV) - Windows Secure Copy
+
+
+TlsHostCertificateFingerprint
+----------------------------
+ TLS - > Transport Layer Security
+ SSL - > Secure Socket Layer
+
+
+----->>>>https://winscp.net/eng/docs/library_sessionoptions
+-- GiveUpSecurityAndAcceptAnyTlsHostCertificate --
+
+
+
+                                 FTPs & SFTP 
+                        ----------------------------------
+        (https://www.howtogeek.com/194740/what-is-the-difference-between-ftps-and-sftp/)
+                               ---------------
+
+They are two completely different protocols.
+
+FTPS is FTP with SSL for security. It uses a control channel and opens new connections for the data transfer. As it uses SSL, it requires a certificate.
+
+SFTP (SSH File Transfer Protocol/Secure File Transfer Protocol) was designed as an extension of SSH to provide file transfer capability, so it usually uses only the SSH port for both data and control.
+
+In most SSH server installations you will have SFTP support, but FTPS would need the additional configuration of a supported FTP server.
+
+
+   * * * * * * * * * * * ** *   ** *  ** * * * * * * * * * ** * *  ** * * * *
+
+
+
+FTPS (FTP/SSL) is a name used to provide a number of ways that FTP software can perform secure file transfers. 
+Each way involves the use of a SSL/TLS layer below the standard FTP protocol to encrypt the control and/or data channels.
+
+Pros:
+-----
+
+Widely known and used
+The communication can be read and understood by a human
+Provides services for server-to-server file transfer
+SSL/TLS has good authentication mechanisms (X.509 certificate features)
+FTP and SSL/TLS support is built into many internet communications frameworks
+
+Cons:
+-----
+
+Does not have a uniform directory listing format
+Requires a secondary DATA channel, which makes it hard to use behind firewalls
+Does not define a standard for file name character sets (encodings)
+Not all FTP servers support SSL/TLS
+Does not have a standard way to get and change file or directory attributes
+SFTP (SSH File Transfer Protocol) is a network protocol that provides file transfer and manipulation functionality over any reliable data stream. It is typically used with the SSH-2 protocol (TCP port 22) to provide secure file transfer, but is intended to be usable with other protocols as well.
+
+Pros:
+-----
+
+Has a good standards background which strictly defines most (if not all) aspects of operations
+Has only one connection (no need for a DATA connection)
+The connection is always secured
+The directory listing is uniform and machine-readable
+The protocol includes operations for permission and attribute manipulation, file locking, and more functionality
+
+
+Cons: 
+-----
+
+The communication is binary and can not be logged “as is” for human reading
+SSH(Secure Shell) keys are harder to manage and validate
+The standards define certain things as optional or recommended, which leads to certain compatibility problems between different software titles from different vendors.
+No server-to-server copy and recursive directory removal operations
+No built-in SSH/SFTP support in VCL and .NET frameworks
+
